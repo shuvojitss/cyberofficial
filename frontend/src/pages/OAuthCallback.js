@@ -11,7 +11,7 @@ const OAuthCallback = ({ provider, setUserProfile }) => {
     
     if (code) {
       // Send code to Flask backend to exchange for tokens
-      fetch(`http://localhost:8000/api/auth/${provider}/callback?code=${code}`, {
+      fetch(`https://railwayback-production-d3fc.up.railway.app/api/auth/${provider}/callback?code=${code}`, {
         method: 'GET',
         credentials: 'include',
       })
